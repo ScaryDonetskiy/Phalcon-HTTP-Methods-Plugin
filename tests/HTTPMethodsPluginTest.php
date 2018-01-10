@@ -2,6 +2,7 @@
 
 namespace Vados\PhalconPlugins\Tests;
 
+use Phalcon\Di\FactoryDefault;
 use Vados\PhalconPlugins\HTTPMethodsPlugin;
 use Vados\PhalconPlugins\Tests\mocks\Requests;
 use Phalcon\Events\Event;
@@ -39,6 +40,7 @@ class HTTPMethodsPluginTest extends TestCase
         $this->instance = new HTTPMethodsPlugin();
         $this->event = new Event('dispatch:beforeExecuteRoute', $this);
         $this->dispatcher = new Dispatcher();
+        $this->dispatcher->setDI(new FactoryDefault());
         $this->dispatcher->setDefaultNamespace('Vados\PhalconPlugins\Tests\mocks');
         $this->dispatcher->setControllerName('Test');
         $this->dispatcher->getDI()->set('request', new Requests());
