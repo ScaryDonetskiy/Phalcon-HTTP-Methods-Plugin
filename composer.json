@@ -2,7 +2,7 @@
     "name": "vados/phalcon-http-methods-plugin",
     "description": "Phalcon plugin for checking access by HTTP Method of request",
     "minimum-stability": "dev",
-    "license": "BSD 2-Clause",
+    "license": "BSD-2-Clause",
     "authors": [
         {
             "name": "Vladyslav Pozdnyakov",
