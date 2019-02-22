@@ -14,6 +14,7 @@ use Phalcon\Mvc\Dispatcher;
 class HTTPMethodsPlugin
 {
     /**
+     * @scrutinizer ignore-unused
      * @param Event $event
      * @param Dispatcher $dispatcher
      * @return bool
