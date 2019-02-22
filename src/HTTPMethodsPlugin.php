@@ -14,12 +14,11 @@ use Phalcon\Mvc\Dispatcher;
 class HTTPMethodsPlugin
 {
     /**
-     * @scrutinizer ignore-unused
      * @param Event $event
      * @param Dispatcher $dispatcher
      * @return bool
      */
-    public function beforeExecuteRoute(Event $event, Dispatcher $dispatcher): bool
+    public function beforeExecuteRoute(/** @scrutinizer ignore-unused */ Event $event, Dispatcher $dispatcher): bool
     {
         /** @var AdapterInterface $annotationsAdapter */
         $annotationsAdapter = $dispatcher->getDI()->get('annotations');

@@ -4,6 +4,7 @@
 ![PHP from Packagist](https://img.shields.io/packagist/php-v/vados/phalcon-http-methods-plugin.svg)
 ![Packagist](https://img.shields.io/packagist/dt/vados/phalcon-http-methods-plugin.svg)
 ![GitHub Issues](https://img.shields.io/github/issues-raw/ScaryDonetskiy/Phalcon-HTTP-Methods-Plugin.svg)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ScaryDonetskiy/Phalcon-HTTP-Methods-Plugin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ScaryDonetskiy/Phalcon-HTTP-Methods-Plugin/?branch=master)
 
 Phalcon plugin for checking access by HTTP Method of request. 
 
