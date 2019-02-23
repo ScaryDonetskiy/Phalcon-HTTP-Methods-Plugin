@@ -4,7 +4,8 @@ php:
   - '7.2'
   - '7.3'
 before_install:
-  - apt update && apt install php7-dev gcc libpcre3-dev
+  - sudo apt update
+  - sudo apt install php7-dev gcc libpcre3-dev
   - git clone --depth=1 "git://github.com/phalcon/cphalcon.git"
   - sudo ./cphalcon/build/install
   - echo "extension = phalcon.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
