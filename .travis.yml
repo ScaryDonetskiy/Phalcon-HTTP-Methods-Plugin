@@ -1,15 +1,15 @@
 language: php
+sudo: true
 php:
   - '7.1'
   - '7.2'
   - '7.3'
-before_install:
-  - sudo apt update
-  - sudo apt install php7-dev gcc libpcre3-dev
-  - git clone --depth=1 "git://github.com/phalcon/cphalcon.git"
-  - sudo ./cphalcon/build/install
-  - echo "extension = phalcon.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+env:
+  - PHALCON_VERSION="v3.4.1"
 install:
-  - composer install
+  - git clone --depth=1 -q --branch=${PHALCON_VERSION} https://github.com/phalcon/cphalcon.git
+  - '(cd cphalcon/build; bash install &>/dev/null && phpenv config-add ../tests/_ci/phalcon.ini &> /dev/null && cd ../..;)'
+  - php --ri phalcon
+  - travis_retry composer install --prefer-dist --no-interaction
 script:
   - composer test
